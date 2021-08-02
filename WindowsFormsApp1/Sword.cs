@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace WindowsFormsApp1
 {
@@ -14,19 +15,27 @@ namespace WindowsFormsApp1
         public Rectangle spaceRec;//variable for a rectangle to place our image in
 
         //Create a constructor (initialises the values of the fields)
-    }
-    public Sword()
-    {
-        x = 10;
-        y = 350;
-        width = 73;
-        height = 39;
-        sword = Properties.Resources.Sword;
-        spaceRec = new Rectangle(x, y, width, height);
-    }
 
-    public void drawSword(Graphics g)
-    {
-        g.DrawImage(sword, spaceRec);
+        public Sword()
+        {
+            x = 10;
+            y = 350;
+            width = 73;
+            height = 39;
+            sword = Properties.Resources.Sword;
+            spaceRec = new Rectangle(x, y, width, height);
+        }
+
+        public void drawSword(Graphics g)
+        {
+            g.DrawImage(sword, spaceRec);
+        }
+
+        public void moveSword(int mouseX, int mouseY)
+        {
+            spaceRec.X = mouseX - (spaceRec.Width / 2);
+            spaceRec.Y = mouseY - (spaceRec.Height / 2);
+
+        }
     }
 }

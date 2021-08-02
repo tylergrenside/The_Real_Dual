@@ -29,7 +29,14 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.tmrShoot = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
+            // 
+            // tmrShoot
+            // 
+            this.tmrShoot.Enabled = true;
+            this.tmrShoot.Tick += new System.EventHandler(this.tmrSword_Tick);
             // 
             // Form1
             // 
@@ -39,11 +46,14 @@ namespace WindowsFormsApp1
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint_1);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer tmrShoot;
     }
 }
 

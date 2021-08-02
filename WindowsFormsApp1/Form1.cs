@@ -16,17 +16,57 @@ namespace WindowsFormsApp1
         Sword sword = new Sword();//create object called Sword
         //declare a list  missiles from the missile class
         List<Beam> beams = new List<Beam>();
-        List<Planet> planets = new List<Planet>();
+        List<Fireball> fireballs = new List<Fireball>();
         Random yspeed = new Random();
-        int ammo;
         public Form1()
         {
             InitializeComponent();
+            for (int i = 0; i < 7; i++)
+            {
+                int displacement = 10 + (i * 70);
+                fireballs.Add(new Fireball(displacement));
+            }
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Paint_1(object sender, PaintEventArgs e)
+        {
+            g = e.Graphics;
+            sword.drawSword(g);
+            foreach (Beam m in beams)
+            {
+                m.draw(g);
+            }
+            foreach (Fireball p in fireballs)
+            {
+
+                //if the Fireball reaches the leftside of the form relocate it back to the top
+                if (p.y >= ClientSize.Height)
+                {
+                    p.y = -20;
+                }
+
+            }
+            for (int i = 0; i < 7; i++)
+            {
+                // generate a random number from 5 to 20 and put it in rndmspeed
+                int rndmspeed = yspeed.Next(5, 20);
+                fireballs[i].y += rndmspeed;
+
+
+                //call the firebell's class's drawFirebeall method to draw the images
+                fireballs[i].draw(g);
+            }
+        }
+
+        private void tmrSword_Tick(object sender, EventArgs e)
+        {
+            Invalidate();
         }
     }
 }

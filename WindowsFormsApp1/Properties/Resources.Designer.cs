@@ -73,9 +73,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pixilart_drawing__4_ {
+        internal static System.Drawing.Bitmap Fireball {
             get {
-                object obj = ResourceManager.GetObject("pixilart_drawing__4_", resourceCulture);
+                object obj = ResourceManager.GetObject("Fireball", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
