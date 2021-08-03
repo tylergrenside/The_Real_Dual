@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
         public int x, y, width, height;//variables for the rectangle
         public Image sword;//variable for the swords's image
 
-        public Rectangle spaceRec;//variable for a rectangle to place our image in
+        public Rectangle swordRec;//variable for a rectangle to place our image in
 
         //Create a constructor (initialises the values of the fields)
 
@@ -23,18 +23,18 @@ namespace WindowsFormsApp1
             width = 73;
             height = 39;
             sword = Properties.Resources.Sword;
-            spaceRec = new Rectangle(x, y, width, height);
+            swordRec = new Rectangle(x, y, width, height);
         }
 
         public void drawSword(Graphics g)
         {
-            g.DrawImage(sword, spaceRec);
+            g.DrawImage(sword, swordRec);
         }
 
         public void moveSword(int mouseX, int mouseY)
         {
-            spaceRec.X = mouseX - (spaceRec.Width / 2);
-            spaceRec.Y = mouseY - (spaceRec.Height / 2);
+            swordRec.X = mouseX - (swordRec.Width / 2);
+            swordRec.Y = mouseY - (swordRec.Height / 2);
 
         }
     }

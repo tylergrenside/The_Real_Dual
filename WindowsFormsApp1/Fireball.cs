@@ -19,8 +19,8 @@ namespace WindowsFormsApp1
         //Create a constructor (initialises the values of the fields)
         public Fireball(int displacement)
         {
-            x = displacement;
-            y = 10;
+            x = 10;
+            y = displacement;
             width = 20;
             height = 20;
             fireballimage = Properties.Resources.Fireball;
@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
         }
         public void movePlanet(Graphics g)
         {
-            y += 5;
+            x += 5;
             fireballRec.Location = new Point(x, y);
 
         }

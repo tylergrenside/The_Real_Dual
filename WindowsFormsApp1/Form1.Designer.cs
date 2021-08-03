@@ -31,12 +31,22 @@ namespace WindowsFormsApp1
         {
             this.components = new System.ComponentModel.Container();
             this.tmrShoot = new System.Windows.Forms.Timer(this.components);
+            this.tmrFireball = new System.Windows.Forms.Timer(this.components);
+            this.tmrSword = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // tmrShoot
             // 
             this.tmrShoot.Enabled = true;
             this.tmrShoot.Tick += new System.EventHandler(this.tmrSword_Tick);
+            // 
+            // tmrFireball
+            // 
+            this.tmrFireball.Enabled = true;
+            // 
+            // tmrSword
+            // 
+            this.tmrSword.Enabled = true;
             // 
             // Form1
             // 
@@ -54,6 +64,8 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.Timer tmrShoot;
+        private System.Windows.Forms.Timer tmrFireball;
+        private System.Windows.Forms.Timer tmrSword;
     }
 }
 

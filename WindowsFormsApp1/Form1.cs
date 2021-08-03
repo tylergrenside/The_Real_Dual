@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
         //declare a list  missiles from the missile class
         List<Beam> beams = new List<Beam>();
         List<Fireball> fireballs = new List<Fireball>();
-        Random yspeed = new Random();
+        Random xspeed = new Random();
         public Form1()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+          
         }
 
         private void Form1_Paint_1(object sender, PaintEventArgs e)
@@ -46,27 +46,41 @@ namespace WindowsFormsApp1
             {
 
                 //if the Fireball reaches the leftside of the form relocate it back to the top
-                if (p.y >= ClientSize.Height)
+                if (p.x >= ClientSize.Height)
                 {
-                    p.y = -20;
+                    p.x = 20;
                 }
 
             }
             for (int i = 0; i < 7; i++)
             {
                 // generate a random number from 5 to 20 and put it in rndmspeed
-                int rndmspeed = yspeed.Next(5, 20);
-                fireballs[i].y += rndmspeed;
+                int rndmspeed = xspeed.Next(5, 20);
+                fireballs[i].x += rndmspeed;
 
 
                 //call the firebell's class's drawFirebeall method to draw the images
                 fireballs[i].draw(g);
             }
+            
         }
 
         private void tmrSword_Tick(object sender, EventArgs e)
         {
-            Invalidate();
+            for (int i = 0; i < 7; i++)
+            {
+
+
+                /*if (sword.swordRec.IntersectsWith(fireballs[i].fireballRec))
+                {
+                    //reset planet[i] back to top of panel
+                    fireballs[i].y = 30; // set  y value of planetRec
+                    tmrShoot.Enabled = false;
+                    tmrFireball.Enabled = false;
+                }*/
+            }
+
+            this.Invalidate();
         }
     }
 }
