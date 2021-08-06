@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
         // declare fields to use in the class
 
         public int x, y, width, height;//variables for the rectangle
-        public Image fireballimage;//variable for the planet's image
+        public Image fireballimage;//variable for the fireball's image
 
         public Rectangle fireballRec;//variable for a rectangle to place our image in
 
@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
         }
         public void movePlanet(Graphics g)
         {
-            x += 5;
+           x += 5;
             fireballRec.Location = new Point(x, y);
 
         }

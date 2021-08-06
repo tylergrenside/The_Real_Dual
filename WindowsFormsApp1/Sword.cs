@@ -31,11 +31,6 @@ namespace WindowsFormsApp1
             g.DrawImage(sword, swordRec);
         }
 
-        public void moveSword(int mouseX, int mouseY)
-        {
-            swordRec.X = mouseX - (swordRec.Width / 2);
-            swordRec.Y = mouseY - (swordRec.Height / 2);
-
-        }
+       
     }
 }

@@ -43,6 +43,7 @@ namespace WindowsFormsApp1
             // tmrFireball
             // 
             this.tmrFireball.Enabled = true;
+            this.tmrFireball.Tick += new System.EventHandler(this.tmrFireball_Tick);
             // 
             // tmrSword
             // 
