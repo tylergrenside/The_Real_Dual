@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
         //Create a constructor (initialises the values of the fields)
         public Fireball(int displacement)
         {
-            x = 10;
+            x = 500;
             y = displacement;
             width = 20;
             height = 20;
