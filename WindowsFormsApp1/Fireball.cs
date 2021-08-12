@@ -21,8 +21,8 @@ namespace WindowsFormsApp1
         {
             x = 500;
             y = displacement;
-            width = 20;
-            height = 20;
+            width = 30;
+            height = 30;
             fireballimage = Properties.Resources.Fireball;
             fireballRec = new Rectangle(x, y, width, height);
         }
