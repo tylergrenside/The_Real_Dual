@@ -31,6 +31,71 @@ namespace WindowsFormsApp1
             g.DrawImage(sword, swordRec);
         }
 
-       
+        public void MoveSword(string move)
+        {
+            swordRec.Location = new Point(x, y);
+
+            if (move == "right")
+            {
+                if (swordRec.Location.X > 450) // is Sword within 450 of right side
+                {
+
+                    x = 450;
+                    swordRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    x += 5;
+                    swordRec.Location = new Point(x, y);
+                }
+
+
+            }
+            if (move == "left")
+            {
+                if (swordRec.Location.X < 10) // is sword within 10 of left side
+                {
+
+                    x = 10;
+                    swordRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    x -= 5;
+                    swordRec.Location = new Point(x, y);
+                }
+
+            }
+            if (move == "up")
+            {
+                if (swordRec.Location.Y > 450) // is sword within 450 of top side
+                {
+
+                    y = 450;
+                    swordRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    y -= 5;
+                    swordRec.Location = new Point(x, y);
+                }
+
+            }
+            if (move == "down")
+            {
+                if (swordRec.Location.Y < 10) // is sword within 10 of bottom side
+                {
+
+                    y = -10;
+                    swordRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    y += 5;
+                    swordRec.Location = new Point(x, y);
+                }
+
+            }
+        }
     }
 }

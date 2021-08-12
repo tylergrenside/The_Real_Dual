@@ -34,12 +34,13 @@ namespace WindowsFormsApp1
 
             g.DrawImage(fireballimage, fireballRec);
         }
-        public void movePlanet(Graphics g)
+        public void moveFireball(Graphics g)
         {
-           x += 5;
+            x += 5;
             fireballRec.Location = new Point(x, y);
 
         }
     }
 
 }
+
