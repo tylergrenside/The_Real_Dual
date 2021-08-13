@@ -18,10 +18,10 @@ namespace WindowsFormsApp1
         // in the following constructor we pass in the values of spaceRec which
         // gives us the position of the spaceship which we can then use to place the
         // missile where the spaceship is located
-        public Beam(Rectangle spaceRec)
+        public Beam(Rectangle swordRec)
         {
-            x = spaceRec.X + 37; // move beam to sword
-            y = spaceRec.Y;
+            x = swordRec.X + 37; // move beam to sword
+            y = swordRec.Y;
             width = 20;
             height = 20;
             beam = Properties.Resources.Beam;
@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
         }
         public void draw(Graphics g)
         {
-            y -= 30;//speed of missile
+            x += 30;//speed of beam
             beamRec = new Rectangle(x, y, width, height);
             g.DrawImage(beam, beamRec);
         }
