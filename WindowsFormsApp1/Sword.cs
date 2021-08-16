@@ -68,10 +68,10 @@ namespace WindowsFormsApp1
             }
             if (move == "up")
             {
-                if (swordRec.Location.Y > 450) // is sword within 450 of top side
+                if (swordRec.Location.Y < 0) // is sword within 450 of top side
                 {
 
-                    y = 450;
+                    y = 0;
                     swordRec.Location = new Point(x, y);
                 }
                 else
@@ -83,10 +83,10 @@ namespace WindowsFormsApp1
             }
             if (move == "down")
             {
-                if (swordRec.Location.Y < 10) // is sword within 10 of bottom side
+                if (swordRec.Location.Y > 430) // is sword within 10 of bottom side
                 {
 
-                    y = -10;
+                    y = 430;
                     swordRec.Location = new Point(x, y);
                 }
                 else
