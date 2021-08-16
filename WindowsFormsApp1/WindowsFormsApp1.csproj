@@ -55,6 +55,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Beam.cs" />
+    <Compile Include="Cultist.cs" />
     <Compile Include="Fireball.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,7 +100,7 @@
     <None Include="Resources\pixilart-drawing %284%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Benny.png" />
+    <None Include="Resources\cultist.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

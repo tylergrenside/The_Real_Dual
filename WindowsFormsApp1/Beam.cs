@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
             width = 20;
             height = 20;
             beam = Properties.Resources.Beam;
-           beamRec = new Rectangle(x, y, width, height);
+            beamRec = new Rectangle(x, y, width, height);
         }
         public void draw(Graphics g)
         {
